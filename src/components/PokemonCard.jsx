@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function PokemonCard({pokemon}) {
 
    return (
@@ -9,9 +11,14 @@ function PokemonCard({pokemon}) {
 
  }
 
+PokemonCard.propTypes = {
+    pokemon : PropTypes.shape({
+    name : PropTypes.string.isRequired,
+    ImgSrc : PropTypes.bool,
+})
 
-// AJOUT NOUVELLE FONCTION QUETE TROIS //
-
+}
+console.log(PokemonCard);
 
 
 
