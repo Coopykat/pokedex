@@ -18,7 +18,6 @@ PokemonCard.propTypes = {
 })
 
 }
-console.log(PokemonCard);
 
 
 
