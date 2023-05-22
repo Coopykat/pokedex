@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import PokemonCard from './components/PokemonCard'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import NavBar from './components/NavBar';
 import './App.css'
 
 
@@ -34,19 +33,7 @@ const pokemonList = [
   },
 ];
 
-
-
-  // return (
-  //   <div>
-  //     <PokemonCard pokemon={pokemon}/>
-  //   </div>
-
-  // );
-
-
-  // STATE DES ETATS D'AME ERIC //
-
-
+  // STATE //
 
 const [pokemonIndex, setPokemonIndex] = useState(0);
 
@@ -61,11 +48,12 @@ const handleLess = () => {
 const pokemon = pokemonList[pokemonIndex];
 
 return (
+  <div>
+  <NavBar handleLess={handleLess} handleClick={handleClick} />
   <>
-  <PokemonCard pokemon={pokemon} />
-  {pokemonIndex > 0 &&<button onClick={handleLess}>Précédent</button>}
-  {pokemonIndex < pokemonList.length -1 &&<button onClick={handleClick}>Suivant</button>}
+    <PokemonCard pokemon={pokemon} />
   </>
+</div>
 );
 };
 

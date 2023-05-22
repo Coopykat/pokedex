@@ -4,7 +4,26 @@
   padding: 2rem;
   text-align: center;
 }
-
+.card {
+  width: 5em;
+  border-radius: 5px;
+  background-color: lightgreen;
+  box-shadow: 0px 0px 5px gray;
+}
+.card_img {
+width: 100%;
+height: auto;
+background-color: white;
+border-radius: inherit;
+box-shadow: inherit;
+}
+button {
+ text-align: center;
+}
+#next-btn, #previous-btn{
+  font-size: 0.8em;
+  margin: 1em;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
