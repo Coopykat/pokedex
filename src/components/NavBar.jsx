@@ -1,7 +1,17 @@
 import React from 'react'
 
 
-const NavBar = ({ handleLess, handleClick }) => {
+
+
+const NavBar = ({handleLess, handleClick, pokemonList, pokemonIndex }) => {
+
+    const handleNext = () => {
+        if (pokemonList[pokemonIndex].name === 'pikachu') {
+          alert('Pika Pika!');
+        }
+        handleClick();
+      };
+
     return (
       <nav>
         <button onClick={handleLess}id="previous-btn">Précédent</button>
@@ -10,4 +20,4 @@ const NavBar = ({ handleLess, handleClick }) => {
     );
   };
 
-export default NavBar
+export default NavBar;
